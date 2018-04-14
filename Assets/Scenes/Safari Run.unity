@@ -633,6 +633,8 @@ GameObject:
   m_Component:
   - component: {fileID: 424286666}
   - component: {fileID: 424286665}
+  - component: {fileID: 424286668}
+  - component: {fileID: 424286667}
   m_Layer: 0
   m_Name: log obstacle
   m_TagString: Untagged
@@ -697,6 +699,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &424286667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 424286664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f6f9823f091a934a8c6f13754862257, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifetime: 6
+--- !u!114 &424286668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 424286664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74e7bf97baac3bf43aaecb1b42c8b487, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnObject: {fileID: 424286664}
+  maxTime: 10
+  minTime: 4
 --- !u!1 &775789880
 GameObject:
   m_ObjectHideFlags: 0
