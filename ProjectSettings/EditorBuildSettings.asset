@@ -4,4 +4,10 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Start Screen.unity
+    guid: f40820d8c61e748c59eec6d15a369933
+  - enabled: 1
+    path: Assets/Scenes/Safari Run.unity
+    guid: 7eec31d2af047d74990fc583d31b6f01
