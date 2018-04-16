@@ -16,7 +16,7 @@ public class InputState : MonoBehaviour {
     }
     // Use this for initialization
     void Update () {
-        actionButton = Input.anyKeyDown;
+        actionButton = Input.GetKeyDown(KeyCode.Space);
 	}
 	
 	// Update is called once per frame
