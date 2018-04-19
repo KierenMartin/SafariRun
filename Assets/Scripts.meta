@@ -1,7 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: d14d04272ae2deb43bc836ffdb0ed7e4
 folderAsset: yes
 timeCreated: 1523257646
+=======
+guid: a6fedd6c263f4274bad96b86d3e86a4d
+folderAsset: yes
+timeCreated: 1523665249
+>>>>>>> Aly's-Branch
 licenseType: Free
 DefaultImporter:
   externalObjects: {}
