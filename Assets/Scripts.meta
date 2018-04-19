@@ -1,6 +1,7 @@
 fileFormatVersion: 2
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 guid: d14d04272ae2deb43bc836ffdb0ed7e4
 folderAsset: yes
 timeCreated: 1523257646
@@ -14,6 +15,11 @@ guid: 662f0b60ceb8ba64b91b6c790ab42cc1
 folderAsset: yes
 timeCreated: 1523511874
 >>>>>>> Finella
+=======
+guid: 597b080669b06d541bcb5b446ed212bd
+folderAsset: yes
+timeCreated: 1523674851
+>>>>>>> Bryan's-Branch
 licenseType: Free
 DefaultImporter:
   externalObjects: {}
