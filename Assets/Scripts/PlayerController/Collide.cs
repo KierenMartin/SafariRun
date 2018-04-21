@@ -9,7 +9,7 @@ public class Collide : MonoBehaviour
     {
 		if(col.gameObject.tag == "Obstacle")
         {
-            Debug.Log("Collision");
+            SendMessage("CollidedWithObject");
         }
 
         if(col.gameObject.tag == "Enemy")
