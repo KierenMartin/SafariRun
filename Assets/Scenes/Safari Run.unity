@@ -910,8 +910,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnObject: {fileID: 1282009132628194, guid: 5630892f05168f24d817c26e1c31f32c,
     type: 2}
-  maxTime: 10
-  minTime: 4
+  maxTime: 5
+  minTime: 2
 --- !u!1 &774134449
 GameObject:
   m_ObjectHideFlags: 0
@@ -1250,6 +1250,7 @@ GameObject:
   - component: {fileID: 1337204401}
   - component: {fileID: 1337204400}
   - component: {fileID: 1337204402}
+  - component: {fileID: 1337204403}
   m_Layer: 0
   m_Name: Rhino
   m_TagString: Player
@@ -1328,7 +1329,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 2.5
   m_Material: {fileID: 0}
   m_Interpolate: 1
   m_SleepingMode: 1
@@ -1397,7 +1398,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 355183fcac96d094bbf906d81028a87a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpSpeed: 8
+  jumpSpeed: 12
   forwardSpeed: 0
 --- !u!114 &1337204402
 MonoBehaviour:
@@ -1410,11 +1411,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f06780d178f0471281b5b82ca65dd38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CollisionDelay: 0.25
-  InvulnerableTimer: 1
+  CollisionDelay: 0.1
   collisionCountdown: 0
   hasCollided: 0
-  invulnerableCountdown: 0
+--- !u!114 &1337204403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1337204394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 110bdf72646364b5ba26f1a9d86969e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreDisplay: {fileID: 373084446}
 --- !u!1 &1343093313
 GameObject:
   m_ObjectHideFlags: 0
