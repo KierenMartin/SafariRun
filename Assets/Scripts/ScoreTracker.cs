@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class ScoreTracker : MonoBehaviour {
 
-    private int score;
+    public int score;
     public static ScoreTracker Instance;
     public Text ScoreText;
     public Text HighScoreText;
