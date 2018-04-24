@@ -43,15 +43,15 @@ public class HighScoreTable : MonoBehaviour
         }
 	}
 
-    void OnGUI()
-    {
-        if (gameOver)
-        {
-            for (int i = 1; i <= 5; i++)
-            {
-                GUI.Box(new Rect(100, 75 * i, 150, 50), 
-                    "Pos " + i + ". " + PlayerPrefs.GetInt("HighScore" + i));
-            }
-        }
-    }
+    //void OnGUI()
+    //{
+        //if (gameOver)
+        //{
+            //for (int i = 1; i <= 5; i++)
+            //{
+                //GUI.Box(new Rect(100, 75 * i, 150, 50), 
+                    //"Pos " + i + ". " + PlayerPrefs.GetInt("HighScore" + i));
+            //}
+        //}
+    //}
 }

@@ -2,15 +2,36 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+[RequireComponent(typeof(AnimalController))]
 
 public class ScoreTracker : MonoBehaviour {
 
-    public int score;
+    public float score;
     public static ScoreTracker Instance;
     public Text ScoreText;
     public Text HighScoreText;
+    private AnimalController animalController;
 
-    public int Score
+
+    // Use this for initialization
+    void Start()
+    {
+        animalController = GetComponent<AnimalController>();
+    }
+
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (!animalController.AnimalRunning)
+        {
+            return;
+        }
+        score += Time.deltaTime;
+        ScoreText.text = "" + score;
+    }
+
+    public float Score
     {
         get
         {
@@ -28,7 +49,7 @@ public class ScoreTracker : MonoBehaviour {
             if (PlayerPrefs.GetInt("HighScore") < score)
             {
                 // update value in PlayerPrefs
-                PlayerPrefs.SetInt("HighScore", score);
+                PlayerPrefs.SetFloat("HighScore", score);
                 // update HighScoreText in game
                 HighScoreText.text = score.ToString();
             }
