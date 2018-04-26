@@ -6,17 +6,28 @@ using UnityEngine.UI;
 
 public class ScoreTracker : MonoBehaviour {
 
-    public float score;
+    private float score;
     public static ScoreTracker Instance;
     public Text ScoreText;
     public Text HighScoreText;
     private AnimalController animalController;
-
+    private float highScore;
 
     // Use this for initialization
     void Start()
     {
         animalController = GetComponent<AnimalController>();
+        if (PlayerPrefs.HasKey("HighScore"))
+        {
+            highScore = PlayerPrefs.GetFloat("HighScore");
+        }
+        else
+        {
+            PlayerPrefs.SetFloat("HighScore", 0);
+            highScore = 0;
+        }
+
+        HighScoreText.text = highScore.ToString();
     }
 
 
@@ -27,7 +38,7 @@ public class ScoreTracker : MonoBehaviour {
         {
             return;
         }
-        score += Time.deltaTime;
+        Score += Time.deltaTime;
         ScoreText.text = "" + score;
     }
 
@@ -46,7 +57,7 @@ public class ScoreTracker : MonoBehaviour {
             ScoreText.text = score.ToString();
 
             // checking whether current score is greater than value in PlayerPrefs
-            if (PlayerPrefs.GetInt("HighScore") < score)
+            if (highScore < score)
             {
                 // update value in PlayerPrefs
                 PlayerPrefs.SetFloat("HighScore", score);
