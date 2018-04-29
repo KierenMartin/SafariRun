@@ -23,7 +23,11 @@ GameObject:
   - component: {fileID: 50966805794335384}
   - component: {fileID: 114964867991090668}
   - component: {fileID: 61557974564980986}
+<<<<<<< HEAD:Assets/Prefab/Log.prefab
   - component: {fileID: 114668188215040188}
+=======
+  - component: {fileID: 114900961282393964}
+>>>>>>> Prototype:Assets/Prefab/Obstacles.prefab
   m_Layer: 0
   m_Name: Log
   m_TagString: Obstacle
@@ -89,7 +93,11 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 7.1, y: 7.59}
   m_EdgeRadius: 0
+<<<<<<< HEAD:Assets/Prefab/Log.prefab
 --- !u!114 &114668188215040188
+=======
+--- !u!114 &114900961282393964
+>>>>>>> Prototype:Assets/Prefab/Obstacles.prefab
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -97,6 +105,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1282009132628194}
   m_Enabled: 1
   m_EditorHideFlags: 0
+<<<<<<< HEAD:Assets/Prefab/Log.prefab
   m_Script: {fileID: 11500000, guid: 74e7bf97baac3bf43aaecb1b42c8b487, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
@@ -107,6 +116,12 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 2556f9a283e13954abe6399b20db1ae0, type: 3}
   - {fileID: 21300000, guid: 64066118acb07ef49a9664ef33b1ffa0, type: 3}
   - {fileID: 21300000, guid: f974d69c8293b1b469f042df620d3b9d, type: 3}
+=======
+  m_Script: {fileID: 11500000, guid: 6f6f9823f091a934a8c6f13754862257, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifetime: 10
+>>>>>>> Prototype:Assets/Prefab/Obstacles.prefab
 --- !u!114 &114964867991090668
 MonoBehaviour:
   m_ObjectHideFlags: 1
