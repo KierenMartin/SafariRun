@@ -15,11 +15,12 @@ public class AnimalController : MonoBehaviour {
     private Rigidbody2D animalPhysics;
     private Collider2D collidedObject;
     private bool running = true;
+    AudioSource audio;
 
-	// Use this for initialization
-	private void Start () {
-
-	}
+    // Use this for initialization
+    private void Start () {
+        audio = GetComponent<AudioSource>();
+    }
 	
 	// Update is called once per frame
 	private void Update () {
@@ -33,6 +34,7 @@ public class AnimalController : MonoBehaviour {
             running = true;
             collidedObject.enabled = false;
             collisionCountdown = 0;
+            audio.Play();
         }
 	}
 
@@ -42,7 +44,8 @@ public class AnimalController : MonoBehaviour {
         running = false;
         collisionCountdown = CollisionDelay;
         collidedObject = objCollider;
-
+    
+        audio.Stop();
     }
 
     public bool AnimalRunning {
