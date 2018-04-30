@@ -1126,6 +1126,7 @@ GameObject:
   - component: {fileID: 1321812975}
   - component: {fileID: 1321812978}
   - component: {fileID: 1321812979}
+  - component: {fileID: 1321812977}
   m_Layer: 0
   m_Name: Poacher
   m_TagString: Enemy
@@ -1190,6 +1191,23 @@ Transform:
   m_Father: {fileID: 429596374}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1321812977
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1321812974}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: add13c6ea50b159438b4971972cee593, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!61 &1321812978
 BoxCollider2D:
   m_ObjectHideFlags: 0
