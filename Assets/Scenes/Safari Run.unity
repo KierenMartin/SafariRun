@@ -259,109 +259,6 @@ Transform:
   m_Father: {fileID: 577192640}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &47345830
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 47345831}
-  - component: {fileID: 47345834}
-  - component: {fileID: 47345833}
-  - component: {fileID: 47345835}
-  - component: {fileID: 47345832}
-  m_Layer: 5
-  m_Name: High Score text
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &47345831
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 47345830}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1161944789}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -5}
-  m_SizeDelta: {x: 405, y: 50}
-  m_Pivot: {x: 1, y: 1}
---- !u!114 &47345832
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 47345830}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0eff7415115bb55438026fdec9091f3b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ScoreText: {fileID: 373084446}
-  HighScoreText: {fileID: 47345833}
---- !u!114 &47345833
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 47345830}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: cf09ed79fdd32454c8513a2da89dcdbf, type: 2}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_FontData:
-    m_Font: {fileID: 12800000, guid: 602b243add8ebf043b651d5be016efe3, type: 2}
-    m_FontSize: 40
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 3
-    m_MaxSize: 40
-    m_Alignment: 2
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 1
-    m_LineSpacing: 1
-  m_Text: 'Highscore: 0000 '
---- !u!222 &47345834
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 47345830}
---- !u!114 &47345835
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 47345830}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f06780d178f0471281b5b82ca65dd38, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionDelay: 0
-  collisionCountdown: 0
-  hasCollided: 0
 --- !u!1 &104548014
 GameObject:
   m_ObjectHideFlags: 0
@@ -794,7 +691,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'Score: 0000'
+  m_Text: 'Score: 0'
 --- !u!222 &373084447
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -937,7 +834,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74e7bf97baac3bf43aaecb1b42c8b487, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnObject: {fileID: 1207891812388504, guid: cc303c75653607e4f98e96449ea30019,
+  spawnObject: {fileID: 1453841922034160, guid: cc303c75653607e4f98e96449ea30019,
     type: 2}
   maxTime: 5
   minTime: 2
@@ -1135,7 +1032,6 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 373084444}
-  - {fileID: 47345831}
   m_Father: {fileID: 1928303241}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1455,7 +1351,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ScoreText: {fileID: 373084446}
-  HighScoreText: {fileID: 47345833}
 --- !u!1 &1343093313
 GameObject:
   m_ObjectHideFlags: 0
