@@ -23,7 +23,6 @@ GameObject:
   - component: {fileID: 50766771241425652}
   - component: {fileID: 61091552967263060}
   - component: {fileID: 114059789874736540}
-  - component: {fileID: 114385564376225824}
   m_Layer: 0
   m_Name: CrocodileInfestedWaterhole
   m_TagString: Untagged
@@ -101,24 +100,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 8
---- !u!114 &114385564376225824
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1116563048387242}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ffe7c6d8e344a14798c9ef6e7dfcfc2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnObject: {fileID: 0}
-  maxTime: 10
-  minTime: 4
-  sprites:
-  - {fileID: 21300000, guid: 2556f9a283e13954abe6399b20db1ae0, type: 3}
-  - {fileID: 21300000, guid: 64066118acb07ef49a9664ef33b1ffa0, type: 3}
-  - {fileID: 21300000, guid: f974d69c8293b1b469f042df620d3b9d, type: 3}
 --- !u!212 &212875935785392822
 SpriteRenderer:
   m_ObjectHideFlags: 1

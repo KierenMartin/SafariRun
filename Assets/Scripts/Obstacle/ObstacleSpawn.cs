@@ -45,8 +45,6 @@ public class ObstacleSpawn : MonoBehaviour
     void SpawnObject()
     {
         time = 0;
-        //var renderer = GetComponent<SpriteRenderer>();
-        //renderer.sprite = sprites[Random.Range(0, sprites.Length)];
         Instantiate(spawnObject, transform.position, spawnObject.transform.rotation);
     }
 
