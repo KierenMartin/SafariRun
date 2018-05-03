@@ -342,7 +342,9 @@ Prefab:
     - target: {fileID: 114171175396353032, guid: aca6f8cd66168714997bf9339fd9dcd8,
         type: 2}
       propertyPath: m_Text
-      value: Animal
+      value: 'Rhino
+
+'
       objectReference: {fileID: 0}
     - target: {fileID: 1002564271113868, guid: aca6f8cd66168714997bf9339fd9dcd8, type: 2}
       propertyPath: m_Name
@@ -566,7 +568,7 @@ Prefab:
     - target: {fileID: 114171175396353032, guid: aca6f8cd66168714997bf9339fd9dcd8,
         type: 2}
       propertyPath: m_Text
-      value: 0000000
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1002564271113868, guid: aca6f8cd66168714997bf9339fd9dcd8, type: 2}
       propertyPath: m_Name
@@ -695,7 +697,7 @@ Prefab:
     - target: {fileID: 114171175396353032, guid: aca6f8cd66168714997bf9339fd9dcd8,
         type: 2}
       propertyPath: m_Text
-      value: 0000000
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1002564271113868, guid: aca6f8cd66168714997bf9339fd9dcd8, type: 2}
       propertyPath: m_Name
@@ -761,7 +763,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 75, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &235278910
 MonoBehaviour:
@@ -964,7 +966,7 @@ Prefab:
     - target: {fileID: 114171175396353032, guid: aca6f8cd66168714997bf9339fd9dcd8,
         type: 2}
       propertyPath: m_Text
-      value: Animal
+      value: Rhino
       objectReference: {fileID: 0}
     - target: {fileID: 1002564271113868, guid: aca6f8cd66168714997bf9339fd9dcd8, type: 2}
       propertyPath: m_Name
@@ -993,6 +995,12 @@ RectTransform:
   m_PrefabParentObject: {fileID: 224191965189698924, guid: aca6f8cd66168714997bf9339fd9dcd8,
     type: 2}
   m_PrefabInternal: {fileID: 374791755}
+--- !u!114 &462777745 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114171175396353032, guid: aca6f8cd66168714997bf9339fd9dcd8,
+    type: 2}
+  m_PrefabInternal: {fileID: 912291369}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1001 &485557540
 Prefab:
   m_ObjectHideFlags: 0
@@ -1208,7 +1216,7 @@ Prefab:
     - target: {fileID: 114171175396353032, guid: aca6f8cd66168714997bf9339fd9dcd8,
         type: 2}
       propertyPath: m_Text
-      value: Animal
+      value: Rhino
       objectReference: {fileID: 0}
     - target: {fileID: 1002564271113868, guid: aca6f8cd66168714997bf9339fd9dcd8, type: 2}
       propertyPath: m_Name
@@ -1237,6 +1245,12 @@ RectTransform:
   m_PrefabParentObject: {fileID: 224191965189698924, guid: aca6f8cd66168714997bf9339fd9dcd8,
     type: 2}
   m_PrefabInternal: {fileID: 590492986}
+--- !u!114 &618492043 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114171175396353032, guid: aca6f8cd66168714997bf9339fd9dcd8,
+    type: 2}
+  m_PrefabInternal: {fileID: 148040820}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1001 &648870484
 Prefab:
   m_ObjectHideFlags: 0
@@ -1337,7 +1351,7 @@ Prefab:
     - target: {fileID: 114171175396353032, guid: aca6f8cd66168714997bf9339fd9dcd8,
         type: 2}
       propertyPath: m_Text
-      value: Animal
+      value: Rhino
       objectReference: {fileID: 0}
     - target: {fileID: 1002564271113868, guid: aca6f8cd66168714997bf9339fd9dcd8, type: 2}
       propertyPath: m_Name
@@ -1544,7 +1558,7 @@ Prefab:
     - target: {fileID: 114171175396353032, guid: aca6f8cd66168714997bf9339fd9dcd8,
         type: 2}
       propertyPath: m_Text
-      value: 0000000
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1002564271113868, guid: aca6f8cd66168714997bf9339fd9dcd8, type: 2}
       propertyPath: m_Name
@@ -1747,7 +1761,9 @@ Prefab:
     - target: {fileID: 114171175396353032, guid: aca6f8cd66168714997bf9339fd9dcd8,
         type: 2}
       propertyPath: m_Text
-      value: Animal
+      value: 'Rhino
+
+'
       objectReference: {fileID: 0}
     - target: {fileID: 1002564271113868, guid: aca6f8cd66168714997bf9339fd9dcd8, type: 2}
       propertyPath: m_Name
@@ -1776,6 +1792,12 @@ RectTransform:
   m_PrefabParentObject: {fileID: 224191965189698924, guid: aca6f8cd66168714997bf9339fd9dcd8,
     type: 2}
   m_PrefabInternal: {fileID: 1016909713}
+--- !u!114 &1042179110 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114171175396353032, guid: aca6f8cd66168714997bf9339fd9dcd8,
+    type: 2}
+  m_PrefabInternal: {fileID: 177649400}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1001 &1097762597
 Prefab:
   m_ObjectHideFlags: 0
@@ -1876,7 +1898,7 @@ Prefab:
     - target: {fileID: 114171175396353032, guid: aca6f8cd66168714997bf9339fd9dcd8,
         type: 2}
       propertyPath: m_Text
-      value: 0000000
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1002564271113868, guid: aca6f8cd66168714997bf9339fd9dcd8, type: 2}
       propertyPath: m_Name
@@ -1905,6 +1927,12 @@ RectTransform:
   m_PrefabParentObject: {fileID: 224191965189698924, guid: aca6f8cd66168714997bf9339fd9dcd8,
     type: 2}
   m_PrefabInternal: {fileID: 1097762597}
+--- !u!114 &1210100842 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114171175396353032, guid: aca6f8cd66168714997bf9339fd9dcd8,
+    type: 2}
+  m_PrefabInternal: {fileID: 1097762597}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1001 &1234669743
 Prefab:
   m_ObjectHideFlags: 0
@@ -2307,7 +2335,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 45.53, y: 100}
+  m_SizeDelta: {x: 40, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1337534452
 MonoBehaviour:
@@ -2331,6 +2359,12 @@ MonoBehaviour:
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 0
   m_ChildControlHeight: 0
+--- !u!114 &1453054320 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114171175396353032, guid: aca6f8cd66168714997bf9339fd9dcd8,
+    type: 2}
+  m_PrefabInternal: {fileID: 1737894569}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &1477687541
 GameObject:
   m_ObjectHideFlags: 0
@@ -2368,7 +2402,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 38.19, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1477687543
 MonoBehaviour:
@@ -2621,7 +2655,7 @@ Prefab:
     - target: {fileID: 114171175396353032, guid: aca6f8cd66168714997bf9339fd9dcd8,
         type: 2}
       propertyPath: m_Text
-      value: 0000000
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1002564271113868, guid: aca6f8cd66168714997bf9339fd9dcd8, type: 2}
       propertyPath: m_Name
@@ -2645,6 +2679,8 @@ GameObject:
   - component: {fileID: 1741783199}
   - component: {fileID: 1741783201}
   - component: {fileID: 1741783200}
+  - component: {fileID: 1741783202}
+  - component: {fileID: 1741783203}
   m_Layer: 5
   m_Name: HighScoreTable
   m_TagString: Untagged
@@ -2704,6 +2740,37 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1741783198}
+--- !u!114 &1741783202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1741783198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5588bd188d260241af21b20d41887e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  highScores:
+  - {fileID: 1453054320}
+  - {fileID: 462777745}
+  - {fileID: 618492043}
+  - {fileID: 1042179110}
+  - {fileID: 1210100842}
+--- !u!114 &1741783203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1741783198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f06780d178f0471281b5b82ca65dd38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionDelay: 0
+  collisionCountdown: 0
+  hasCollided: 0
 --- !u!1001 &1762897728
 Prefab:
   m_ObjectHideFlags: 0

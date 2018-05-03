@@ -11,7 +11,7 @@ public class ObstacleSpawn : MonoBehaviour
     public float maxTime = 10;
     public float minTime = 4;
 
-    public Sprite[] sprites;
+    //public Sprite[] sprites;
 
     //current time
     private float time;
@@ -45,8 +45,6 @@ public class ObstacleSpawn : MonoBehaviour
     void SpawnObject()
     {
         time = 0;
-        var renderer = GetComponent<SpriteRenderer>();
-        renderer.sprite = sprites[Random.Range(0, sprites.Length)];
         Instantiate(spawnObject, transform.position, spawnObject.transform.rotation);
     }
 
