@@ -7,7 +7,6 @@ using UnityEngine.SceneManagement;
 [RequireComponent(typeof(AnimalController))]
 
 
-
 public class ScoreTracker : MonoBehaviour {
 
     private float score;
@@ -101,16 +100,9 @@ public class ScoreTracker : MonoBehaviour {
     {
         Instance = this;
 
-        // if we haven't created a key in PlayerPrefs called HighScore, 
-        // HighScore will be set to 0 
-       // if (!PlayerPrefs.HasKey("HighScore"))
-           // PlayerPrefs.SetInt("HighScore", 0);
-        
         // sets score and HighScore to 0 at beginning of game
         // HighScore will be set to PlayerPrefs value each game
         ScoreText.text = "0";
-       // HighScoreText.text = PlayerPrefs.GetInt("HighScore").ToString();
-
     }
 
 
@@ -119,4 +111,6 @@ public class ScoreTracker : MonoBehaviour {
         CheckForHighScore(Mathf.FloorToInt(score));
         SceneManager.LoadScene("Start Screen");
     }
+
+   
 }
