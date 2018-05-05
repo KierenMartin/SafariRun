@@ -51,7 +51,7 @@ public class UnlockAnimalFacts : MonoBehaviour
     IEnumerator WaitForSec()
     {
         yield return new WaitForSeconds(3);
-        Destroy(Message);
+        Message.SetActive(false);
     }
 }
 
