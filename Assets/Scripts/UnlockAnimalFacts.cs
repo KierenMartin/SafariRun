@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-[RequireComponent(typeof(AnimalController))]
+[RequireComponent(typeof(ScoreTracker))]
 
 
 public class UnlockAnimalFacts : MonoBehaviour
@@ -12,31 +12,29 @@ public class UnlockAnimalFacts : MonoBehaviour
 
     private float score;
     public Text ScoreText;
-    private AnimalController animalController;
-    int ScoreInt;
+    private ScoreTracker scoreTracker;
+    int scoreInt;
     public Text FactOne;
 
     // Use this for initialization
     void Start()
     {
-        animalController = GetComponent<AnimalController>(); 
+        scoreTracker = GetComponent<ScoreTracker>(); 
     }
 
 
     // Checks score on game screen
     void Update()
     {
-        if (!animalController.AnimalRunning)
+        if (scoreTracker.Score == 10)
         {
-            return;
+            FactOne.text = "Hello";
         }
-
-        Score += Time.deltaTime;
     }
 
 
     // Updates score on game screen
-    public float Score
+    /*public float Score
     {
         get
         {
@@ -59,6 +57,6 @@ public class UnlockAnimalFacts : MonoBehaviour
         {
             FactOne.text = "Hello";  
         }
-    }
+    }*/
 }
  

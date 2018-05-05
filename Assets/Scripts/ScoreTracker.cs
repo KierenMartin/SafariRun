@@ -5,8 +5,6 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(AnimalController))]
-
-
 public class ScoreTracker : MonoBehaviour {
 
     private float score;
