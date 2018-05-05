@@ -9,56 +9,54 @@ using UnityEngine.SceneManagement;
 
 public class UnlockAnimalFacts : MonoBehaviour
 {
+    public Text FactOne, FactTwo, FactThree;
+    public GameObject Message;
+    public int ScoreInt;
+   
 
-    private float score;
-    public Text ScoreText;
-    private AnimalController animalController;
-    int ScoreInt;
-    public Text FactOne;
-
-    // Use this for initialization
     void Start()
     {
-        animalController = GetComponent<AnimalController>(); 
+        ScoreInt = PlayerPrefs.GetInt("ScoreInt");
+        Message.SetActive(false);
     }
 
 
-    // Checks score on game screen
     void Update()
     {
-        if (!animalController.AnimalRunning)
-        {
-            return;
-        }
+        ScoreInt = PlayerPrefs.GetInt("ScoreInt");
 
-        Score += Time.deltaTime;
-    }
-
-
-    // Updates score on game screen
-    public float Score
-    {
-        get
-        {
-            return score;
-        }
-
-        set
-        {
-            // assign to a variable
-            score = value;
-            //change score from float to int
-            int ScoreInt = Mathf.FloorToInt(score);
-        }
-    }
-
-
-    private void DrawFacts()
-    {
         if (ScoreInt == 10)
         {
-            FactOne.text = "Hello";  
+            FactOne.text = "The White Rhinoceros can weigh over 3500 kg".ToString();
+            Message.SetActive(true);
+            StartCoroutine("WaitForSec");
+        }
+
+        if (ScoreInt == 20)
+        {
+            FactTwo.text = "Rhinoceros are often hunted by humans for their horns".ToString();
+            Message.SetActive(true);
+            StartCoroutine("WaitForSec");
+        }
+
+        if (ScoreInt == 30)
+        {
+            FactThree.text = "White Rhinoceros are grey in colour despite their name".ToString();
+            Message.SetActive(true);
+            StartCoroutine("WaitForSec");
         }
     }
+
+
+    IEnumerator WaitForSec()
+    {
+        yield return new WaitForSeconds(3);
+        Destroy(Message);
+    }
 }
+
+    
+
+   
+
  

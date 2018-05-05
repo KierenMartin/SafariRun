@@ -13,6 +13,7 @@ public class ScoreTracker : MonoBehaviour {
     public static ScoreTracker Instance;
     public Text ScoreText;
     private AnimalController animalController;
+    public int ScoreInt;
     
     //the array of values in the high score table
     int[] highScoreValues;
@@ -44,6 +45,7 @@ public class ScoreTracker : MonoBehaviour {
         Score += Time.deltaTime;
     }   
 
+
     // Updates score on game screen
     public float Score
     {
@@ -57,9 +59,11 @@ public class ScoreTracker : MonoBehaviour {
             // assign to a variable
             score = value;
             //change score from float to int
-            int ScoreInt = Mathf.FloorToInt(score);
+            ScoreInt = Mathf.FloorToInt(score);
             // update ScoreText in scene
             ScoreText.text = Mathf.FloorToInt(score).ToString();
+
+            PlayerPrefs.SetInt("ScoreInt", ScoreInt);
         }
     }
 
@@ -111,6 +115,4 @@ public class ScoreTracker : MonoBehaviour {
         CheckForHighScore(Mathf.FloorToInt(score));
         SceneManager.LoadScene("Start Screen");
     }
-
-   
 }
