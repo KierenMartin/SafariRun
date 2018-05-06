@@ -2,46 +2,47 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-[RequireComponent(typeof(AnimalController))]
+using UnityEngine.SceneManagement;
 
+[RequireComponent(typeof(AnimalController))]
 public class ScoreTracker : MonoBehaviour {
 
     private float score;
     public static ScoreTracker Instance;
     public Text ScoreText;
-    public Text HighScoreText;
     private AnimalController animalController;
-    private float highScore;
+    
+    //the array of values in the high score table
+    int[] highScoreValues;
+    //number of high scores in table
+    int highScoreCount = 5;
 
     // Use this for initialization
     void Start()
     {
         animalController = GetComponent<AnimalController>();
-        if (PlayerPrefs.HasKey("HighScore"))
-        {
-            highScore = PlayerPrefs.GetFloat("HighScore");
-        }
-        else
-        {
-            PlayerPrefs.SetFloat("HighScore", 0);
-            highScore = 0;
-        }
 
-        HighScoreText.text = highScore.ToString();
+        // loads high scores into PlayerPrefs
+        highScoreValues = new int[highScoreCount];
+        for (int x = 0; x < highScoreCount; x++)
+        {
+            highScoreValues[x] = PlayerPrefs.GetInt("highScoreValues" + x);
+        }
     }
 
 
-    // Update is called once per frame
+    // Checks score on game screen
     void Update()
     {
         if (!animalController.AnimalRunning)
         {
             return;
         }
-        Score += Time.deltaTime;
-        ScoreText.text = "" + score;
-    }
 
+        Score += Time.deltaTime;
+    }   
+
+    // Updates score on game screen
     public float Score
     {
         get
@@ -53,19 +54,43 @@ public class ScoreTracker : MonoBehaviour {
         {
             // assign to a variable
             score = value;
+            //change score from float to int
+            int ScoreInt = Mathf.FloorToInt(score);
             // update ScoreText in scene
-            ScoreText.text = score.ToString();
+            ScoreText.text = Mathf.FloorToInt(score).ToString();
+        }
+    }
 
-            // checking whether current score is greater than value in PlayerPrefs
-            if (highScore < score)
+    
+    //top 5 high scores are saved in PlayerPrefs
+    void SaveScores()
+    {
+        for (int x = 0; x < highScoreCount; x++)
+        {
+            PlayerPrefs.SetInt("highScoreValues" + x, highScoreValues[x]);
+        }
+    }
+
+
+    //check the current score against the scores in the high score table
+    public void CheckForHighScore(int value)
+    {
+        for (int x = 0; x < highScoreCount; x++)
+        {
+            if (value > highScoreValues[x])
             {
-                // update value in PlayerPrefs
-                PlayerPrefs.SetFloat("HighScore", score);
-                // update HighScoreText in game
-                HighScoreText.text = score.ToString();
+                for (int y = highScoreCount - 1; y > x; y--)
+                {
+                    highScoreValues[y] = highScoreValues[y - 1];
+                }
+
+                highScoreValues[x] = value;
+
+                SaveScores();
+
+                break;
             }
         }
-
     }
 
 
@@ -73,16 +98,21 @@ public class ScoreTracker : MonoBehaviour {
     {
         Instance = this;
 
-        // if we haven't created a key in PlayerPrefs called HighScore, 
-        // HighScore will be set to 0 
-        if (!PlayerPrefs.HasKey("HighScore"))
-            PlayerPrefs.SetInt("HighScore", 0);
-        
         // sets score and HighScore to 0 at beginning of game
         // HighScore will be set to PlayerPrefs value each game
         ScoreText.text = "0";
+<<<<<<< HEAD
         //HighScoreText.text = PlayerPrefs.GetInt("HighScore").ToString();
-
-
+=======
     }
+>>>>>>> Finella2
+
+
+    public void EndGame()
+    {
+        CheckForHighScore(Mathf.FloorToInt(score));
+        SceneManager.LoadScene("Start Screen");
+    }
+
+   
 }

@@ -56,4 +56,9 @@ public class AnimalController : MonoBehaviour {
             return this.running;
         }
     }
+
+    public void EndGame()
+    {
+
+    }
 }

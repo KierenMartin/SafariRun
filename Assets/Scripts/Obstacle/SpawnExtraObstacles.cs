@@ -2,16 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ObstacleSpawn : MonoBehaviour
+public class SpawnExtraObstacles : MonoBehaviour
 {
 
     //Spawn The obstacle
-    public GameObject[] spawnObject;
+    public GameObject [] spawnObjects;
 
     public float maxTime = 10;
     public float minTime = 4;
-
-    //public Sprite[] sprites;
 
     //current time
     private float time;
@@ -34,7 +32,7 @@ public class ObstacleSpawn : MonoBehaviour
         //Check if its the right time to spawn the obstacle
         if (time >= spawnTime)
         {
-            SpawnObject();
+            SpawnObjects();
             SetRandomTime();
         }
 
@@ -42,12 +40,13 @@ public class ObstacleSpawn : MonoBehaviour
 
 
     //Spawns the object and resets the time
-    void SpawnObject()
+    void SpawnObjects()
     {
-        var objectToSpawn = spawnObject[Random.Range(0, spawnObject.Length)];
-
         time = 0;
-        Instantiate(objectToSpawn, transform.position, objectToSpawn.transform.rotation);
+
+        int objectIndex = Random.Range(0, spawnObjects.Length);
+
+        Instantiate(spawnObjects[objectIndex], transform.position, transform.rotation);
     }
 
     //Sets the random time to spawn the obstacle between minTime and maxTime
