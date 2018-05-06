@@ -101,11 +101,7 @@ public class ScoreTracker : MonoBehaviour {
         // sets score and HighScore to 0 at beginning of game
         // HighScore will be set to PlayerPrefs value each game
         ScoreText.text = "0";
-<<<<<<< HEAD
-        //HighScoreText.text = PlayerPrefs.GetInt("HighScore").ToString();
-=======
     }
->>>>>>> Finella2
 
 
     public void EndGame()

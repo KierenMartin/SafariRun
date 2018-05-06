@@ -11,7 +11,6 @@ public class UnlockAnimalFacts : MonoBehaviour
 {
 
     private float score;
-    public Text ScoreText;
     private ScoreTracker scoreTracker;
     int scoreInt;
     public Text FactOne;
@@ -26,9 +25,17 @@ public class UnlockAnimalFacts : MonoBehaviour
     // Checks score on game screen
     void Update()
     {
-        if (scoreTracker.Score == 10)
+        if (scoreTracker.Score > 30)
         {
-            FactOne.text = "Hello";
+            FactOne.text = "Fact 3 Unlocked";
+        } 
+        else if (scoreTracker.Score > 20)
+        {
+            FactOne.text = "Fact 2 Unlocked";
+        }
+        else if (scoreTracker.Score > 10)
+        {
+            FactOne.text = "Fact 1 Unlocked";
         }
     }
 
@@ -55,7 +62,7 @@ public class UnlockAnimalFacts : MonoBehaviour
     {
         if (ScoreInt == 10)
         {
-            FactOne.text = "Hello";  
+            FactOne.text = "Animal Fact Unlocked";  
         }
     }*/
 }

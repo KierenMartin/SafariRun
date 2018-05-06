@@ -23,9 +23,9 @@ GameObject:
   - component: {fileID: 114028511277481950}
   - component: {fileID: 61994550947298928}
   - component: {fileID: 50820346615606400}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SnakePit
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -23,9 +23,9 @@ GameObject:
   - component: {fileID: 114626948191399888}
   - component: {fileID: 50814860254507404}
   - component: {fileID: 61935055210837364}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PoacherTrap
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

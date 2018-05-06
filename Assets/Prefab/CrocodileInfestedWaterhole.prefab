@@ -23,9 +23,9 @@ GameObject:
   - component: {fileID: 50766771241425652}
   - component: {fileID: 61091552967263060}
   - component: {fileID: 114059789874736540}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CrocodileInfestedWaterhole
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
