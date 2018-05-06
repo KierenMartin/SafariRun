@@ -6,7 +6,7 @@ public class ObstacleSpawn : MonoBehaviour
 {
 
     //Spawn The obstacle
-    public GameObject spawnObject;
+    public GameObject[] spawnObject;
 
     public float maxTime = 10;
     public float minTime = 4;
@@ -42,8 +42,10 @@ public class ObstacleSpawn : MonoBehaviour
     //Spawns the object and resets the time
     void SpawnObject()
     {
+        var objectToSpawn = spawnObject[Random.Range(0, spawnObject.Length)];
+
         time = 0;
-        Instantiate(spawnObject, transform.position, spawnObject.transform.rotation);
+        Instantiate(objectToSpawn, transform.position, objectToSpawn.transform.rotation);
     }
 
     //Sets the random time to spawn the obstacle between minTime and maxTime

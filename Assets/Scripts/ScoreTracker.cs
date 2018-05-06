@@ -81,7 +81,7 @@ public class ScoreTracker : MonoBehaviour {
         // sets score and HighScore to 0 at beginning of game
         // HighScore will be set to PlayerPrefs value each game
         ScoreText.text = "0";
-        HighScoreText.text = PlayerPrefs.GetInt("HighScore").ToString();
+        //HighScoreText.text = PlayerPrefs.GetInt("HighScore").ToString();
 
 
     }

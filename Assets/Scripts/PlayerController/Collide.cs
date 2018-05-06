@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class Collide : MonoBehaviour
 {
+    public bool Grounded;
 
-	void OnCollisionEnter2D (Collision2D col)
+    void OnCollisionEnter2D (Collision2D col)
     {
 		if(col.gameObject.tag == "Obstacle")
         {
@@ -21,7 +22,20 @@ public class Collide : MonoBehaviour
             Debug.Log("Game Over");
 
         }
+
+        if (col.gameObject.name == "FloorCollider")
+        {
+            Grounded = true;
+        }
     }
-	
-	
+
+	private void OnCollisionExit2D(Collision2D collision)
+	{
+        if (collision.gameObject.name == "FloorCollider") 
+        {
+            Grounded = false;
+        }
+	}
+
+
 }
