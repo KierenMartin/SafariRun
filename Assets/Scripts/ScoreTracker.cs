@@ -111,6 +111,5 @@ public class ScoreTracker : MonoBehaviour {
     public void EndGame()
     {
         CheckForHighScore(Mathf.FloorToInt(score));
-        SceneManager.LoadScene("Start Screen");
     }
 }

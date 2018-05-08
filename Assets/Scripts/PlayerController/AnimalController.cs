@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class AnimalController : MonoBehaviour {
 
@@ -8,7 +9,7 @@ public class AnimalController : MonoBehaviour {
     // before we put an end to it and temporarily deactivate the collider
     public float CollisionDelay;
     public Vector2 KnockBack;
-
+    public GameObject GameOverUI;
 
     public float collisionCountdown = 0f;
     public bool hasCollided = false;
@@ -32,13 +33,6 @@ public class AnimalController : MonoBehaviour {
             running = true;
             GetComponent<Animator>().speed = 1;
         }
-        /*else if (hasCollided)
-        {
-            hasCollided = false;
-            running = true;
-            collidedObject.enabled = false;
-            collisionCountdown = 0;
-        }*/
 	}
 
     public void CollidedWithObject(Collider2D objCollider)
@@ -46,7 +40,7 @@ public class AnimalController : MonoBehaviour {
         //hasCollided = true;
         running = false;
         collisionCountdown = CollisionDelay;
-        objCollider.GetComponent<Collider2D>().enabled = false;
+        objCollider.enabled = false;
         GetComponent<Animator>().speed = 0;
         animalPhysics.velocity = KnockBack;
     }
@@ -59,6 +53,19 @@ public class AnimalController : MonoBehaviour {
 
     public void EndGame()
     {
+        GameOverUI.SetActive(true);
+        Time.timeScale = 0;
+    }
 
+    public void QuitLevel()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene("Start Screen");
+    }
+
+    public void RestartLevel()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene("Safari Run");
     }
 }
