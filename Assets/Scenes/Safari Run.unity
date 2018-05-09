@@ -539,11 +539,20 @@ GameObject:
   m_PrefabInternal: {fileID: 0}
   serializedVersion: 5
   m_Component:
+<<<<<<< HEAD
+  - component: {fileID: 424286666}
+  - component: {fileID: 424286665}
+  - component: {fileID: 424286668}
+  - component: {fileID: 424286667}
+  m_Layer: 0
+  m_Name: log obstacle
+=======
   - component: {fileID: 373084444}
   - component: {fileID: 373084447}
   - component: {fileID: 373084446}
   m_Layer: 5
   m_Name: Score Text
+>>>>>>> Prototype
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1011,22 +1020,49 @@ Transform:
   m_Father: {fileID: 774134450}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
+--- !u!114 &424286667
+=======
 --- !u!114 &686358900
+>>>>>>> Prototype
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
+<<<<<<< HEAD
+  m_GameObject: {fileID: 424286664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f6f9823f091a934a8c6f13754862257, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifetime: 6
+--- !u!114 &424286668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 424286664}
+=======
   m_GameObject: {fileID: 686358898}
+>>>>>>> Prototype
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 74e7bf97baac3bf43aaecb1b42c8b487, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
+  spawnObject: {fileID: 424286664}
+  maxTime: 10
+  minTime: 4
+--- !u!1 &775789880
+=======
   spawnObject:
   - {fileID: 1713941857585480, guid: 863282c404af240928d5c75e30da28ca, type: 2}
   maxTime: 0.25
   minTime: 0.25
 --- !u!1 &687744057
+>>>>>>> Prototype
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
