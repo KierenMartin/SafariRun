@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Collide : MonoBehaviour
 {
+    public bool Grounded;
 
-	void OnCollisionEnter2D (Collision2D col)
+    void OnCollisionEnter2D (Collision2D col)
     {
 		if(col.gameObject.tag == "Obstacle")
         {
@@ -19,9 +21,23 @@ public class Collide : MonoBehaviour
         if(col.gameObject.tag == "Enemy")
         {
             Debug.Log("Game Over");
+            
+            SendMessage("EndGame");
+        }
 
+        if (col.gameObject.name == "FloorCollider")
+        {
+            Grounded = true;
         }
     }
-	
-	
+
+	private void OnCollisionExit2D(Collision2D collision)
+	{
+        if (collision.gameObject.name == "FloorCollider") 
+        {
+            Grounded = false;
+        }
+	}
+
+
 }

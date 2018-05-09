@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Sounds.meta
+guid: b88d60213405be04d9d3b3724285ed91
+folderAsset: yes
+timeCreated: 1524978139
+licenseType: Free
+=======
+guid: f862b38cb0c2d4a4794830d3d4ab30cc
+folderAsset: yes
+timeCreated: 1525773069
+licenseType: Pro
+>>>>>>> master:Assets/Prefab/New Folder.meta
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
