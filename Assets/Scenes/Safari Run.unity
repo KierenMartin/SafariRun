@@ -2055,12 +2055,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
 <<<<<<< HEAD
+<<<<<<< HEAD
   FactOne: {fileID: 1061420076}
   FactTwo: {fileID: 270823008}
   FactThree: {fileID: 1489959156}
   Message: {fileID: 1735305216}
   ScoreInt: 0
 =======
+=======
+>>>>>>> acec3a5c57a6c5820b4b7292470832920bbba901
   ScoreThreshold: 15
   AnimalFacts:
   - The White Rhinoceros can weigh over 3500 kg
@@ -2071,6 +2074,9 @@ MonoBehaviour:
   - {fileID: 270823008}
   - {fileID: 1489959156}
   Message: {fileID: 771190398}
+<<<<<<< HEAD
+>>>>>>> acec3a5c57a6c5820b4b7292470832920bbba901
+=======
 >>>>>>> acec3a5c57a6c5820b4b7292470832920bbba901
 --- !u!4 &1343093315 stripped
 Transform:
