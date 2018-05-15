@@ -9,41 +9,57 @@ using UnityEngine.SceneManagement;
 
 public class UnlockAnimalFacts : MonoBehaviour
 {
-    public Text FactOne, FactTwo, FactThree;
+    private const int FACT_COUNT = 3;
+    private const string FACT_KEY = "FactUnlocked";
+    private const string STRING_KEY = "Fact";
+    private const string CONGRATS = "Well Done!  You unlocked an animal fact!";
+
+    public int ScoreThreshold = 15;
+    public string[] AnimalFacts;
+    public Text[] FactDisplay;
     public GameObject Message;
-    public int ScoreInt;
-   
+
+    private ScoreTracker scoreTracker;
+    private int scoreInt;
+    private int unlockLevel = 0;
 
     void Start()
     {
-        ScoreInt = PlayerPrefs.GetInt("ScoreInt");
-        Message.SetActive(false);
+        scoreTracker = GetComponent<ScoreTracker>();
+        Message.gameObject.SetActive(false);
+
+        initialiseFacts();
     }
 
+    private void initialiseFacts()
+    {
+        for (var i = 0; i < FACT_COUNT; i++)
+        {
+            var key = FACT_KEY + i;
+
+            if (!PlayerPrefs.HasKey(key))
+            {
+                PlayerPrefs.SetInt(key, 0);
+            }
+            else if (PlayerPrefs.GetInt(key) == 1)
+            {
+                unlockLevel = i + 1;
+                FactDisplay[i].text = PlayerPrefs.GetString(STRING_KEY + i);
+            }
+        }
+    }
 
     void Update()
     {
-        ScoreInt = PlayerPrefs.GetInt("ScoreInt");
-
-        if (ScoreInt == 10)
+        scoreInt = scoreTracker.ScoreInt;
+        if (unlockLevel < FACT_COUNT && scoreInt >= ScoreThreshold * (unlockLevel + 1))
         {
-            FactOne.text = "The White Rhinoceros can weigh over 3500 kg".ToString();
-            Message.SetActive(true);
-            StartCoroutine("WaitForSec");
-        }
-
-        if (ScoreInt == 20)
-        {
-            FactTwo.text = "Rhinoceros are often hunted by humans for their horns".ToString();
-            Message.SetActive(true);
-            StartCoroutine("WaitForSec");
-        }
-
-        if (ScoreInt == 30)
-        {
-            FactThree.text = "White Rhinoceros are grey in colour despite their name".ToString();
-            Message.SetActive(true);
-            StartCoroutine("WaitForSec");
+            Message.gameObject.SetActive(true);
+            StartCoroutine(WaitForSec());
+            PlayerPrefs.SetInt(FACT_KEY + unlockLevel, 1);
+            FactDisplay[unlockLevel].text = AnimalFacts[unlockLevel];
+            PlayerPrefs.SetString(STRING_KEY + unlockLevel, AnimalFacts[unlockLevel]);
+            unlockLevel += 1;
         }
     }
 
@@ -51,7 +67,7 @@ public class UnlockAnimalFacts : MonoBehaviour
     IEnumerator WaitForSec()
     {
         yield return new WaitForSeconds(3);
-        Message.SetActive(false);
+        Message.gameObject.SetActive(false);
     }
 }
 
